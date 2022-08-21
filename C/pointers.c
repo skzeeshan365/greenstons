@@ -274,7 +274,7 @@ void fun()
 
     data = (int*) calloc(n, sizeof(int)); */
 
-    if (data == NULL)
+    /* if (data == NULL)
     {
         printf("Memory allocation failed");
         exit(0);
