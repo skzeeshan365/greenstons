@@ -1,0 +1,2 @@
+msg = "fgfgffsdg"
+print(msg)
