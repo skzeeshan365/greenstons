@@ -258,7 +258,7 @@ void fun()
 
     /* int a, b, c;
 
-    printf("Enter numbers: ");
+    /* printf("Enter numbers: ");
     scanf("%d %d %d", &a, &b, &c);
 
     swap(&a, &b, &c);
@@ -272,7 +272,7 @@ void fun()
     printf("Enter total number of elements: ");
     scanf("%d", &n);
 
-    data = (int*) calloc(n, sizeof(int));
+    data = (int*) calloc(n, sizeof(int)); */
 
     if (data == NULL)
     {
