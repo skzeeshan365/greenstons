@@ -267,7 +267,7 @@ void fun()
 
     //Find the largest number using memory allocation
 
-    int n, *data;
+    /* int n, *data;
 
     printf("Enter total number of elements: ");
     scanf("%d", &n);
@@ -294,7 +294,7 @@ void fun()
         }
     }
     
-    printf("Largest value: %d", *data);
+    printf("Largest value: %d", *data); */
 }
 /* void swap(int *a, int *b, int *c) {
     int temp;
