@@ -8,10 +8,10 @@ time.sleep(4)
 
 def login():
     username = browser.find_element_by_xpath('/html/body/div[1]/section/main/article/div[2]/div[1]/div/form/div/div[1]/div/label/input')
-    username.send_keys('nahseez365')
+    username.send_keys('username')
     time.sleep(4)
     password = browser.find_element_by_xpath('/html/body/div[1]/section/main/article/div[2]/div[1]/div/form/div/div[2]/div/label/input')
-    password.send_keys('Zeeshan@92')
+    password.send_keys('password')
     password.submit()
     time.sleep(4)
 
@@ -36,7 +36,7 @@ def final():
     time.sleep(7)
     msgbox = browser.find_element_by_tag_name('textarea')
     for i in range(0, 100):
-        msgbox.send_keys("Sorry baby")
+        msgbox.send_keys("Message")
         send = browser.find_element_by_xpath('/html/body/div[1]/section/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div[3]/button')
         send.click()
 
