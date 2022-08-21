@@ -39,6 +39,4 @@ def final():
         msgbox.send_keys("Message")
         send = browser.find_element_by_xpath('/html/body/div[1]/section/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div[3]/button')
         send.click()
-
-
 final()
