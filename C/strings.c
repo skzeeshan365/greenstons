@@ -4,6 +4,7 @@
 
 char str[20];
 void examples();
+void reverseSentence();
 
 int main() 
 {
@@ -101,4 +102,19 @@ void examples()
     printf("No of consonants: %d\n", consonants);
     printf("No of digits: %d\n", digits);
     printf("No of whitespaces: %d\n", spaces); */
+
+    //Reverse a sentence using recursion
+
+    /* printf("Enter a sentence: ");
+    reverseSentence(); */
 }
+/* void reverseSentence() 
+{
+    char c;
+    scanf("%c", &c);
+    if (c != '\n')
+    {
+       reverseSentence();
+       printf("%c", c);
+    }
+} */
