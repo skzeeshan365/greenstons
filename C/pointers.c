@@ -21,12 +21,12 @@ void fun()
     // printf("\nValue of C after assigning value from pointer pc, %d", c);
     
     // Relation between pointers and arrays
-    // int x[5];
-    // for (int i = 0; i < 5; i++)
-    // {
-    //     printf("&x[%d] = %p\n", i, &x[i]);
-    // }
-    // printf("Address of array %p", x);
+    /* int x[5];
+    for (int i = 0; i < 5; i++)
+    {
+        printf("x[%d] = %p\n", i, &x[i]);
+    }
+    printf("Address of array %p", x); */
 
     /* int i, x[6], sum = 0;
     printf("Enter 6 numbers: ");
