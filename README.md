@@ -1,2 +1,2 @@
-# GREENSTONS, Zeeshan
-A collaborator of this repository
+# GREENSTONS
+A collaboration repository
