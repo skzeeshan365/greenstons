@@ -149,7 +149,7 @@ void examples()
 
     // Sort strings in the dictionary order
 
-    char c[5][50], temp[50];
+    /* char c[5][50], temp[50];
 
     printf("Enter five words: ");
 
@@ -178,7 +178,7 @@ void examples()
     for (int i = 0; i < 5; ++i)
     {
         fputs(c[i], stdout);
-    }
+    } */
 }
 /* void reverseSentence() 
 {
