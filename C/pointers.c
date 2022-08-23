@@ -21,12 +21,12 @@ void fun()
     // printf("\nValue of C after assigning value from pointer pc, %d", c);
     
     // Relation between pointers and arrays
-    // int x[5];
-    // for (int i = 0; i < 5; i++)
-    // {
-    //     printf("&x[%d] = %p\n", i, &x[i]);
-    // }
-    // printf("Address of array %p", x);
+    /* int x[5];
+    for (int i = 0; i < 5; i++)
+    {
+        printf("x[%d] = %p\n", i, &x[i]);
+    }
+    printf("Address of array %p", x); */
 
     /* int i, x[6], sum = 0;
     printf("Enter 6 numbers: ");
@@ -258,7 +258,7 @@ void fun()
 
     /* int a, b, c;
 
-    printf("Enter numbers: ");
+    /* printf("Enter numbers: ");
     scanf("%d %d %d", &a, &b, &c);
 
     swap(&a, &b, &c);
@@ -267,14 +267,14 @@ void fun()
 
     //Find the largest number using memory allocation
 
-    int n, *data;
+    /* int n, *data;
 
     printf("Enter total number of elements: ");
     scanf("%d", &n);
 
-    data = (int*) calloc(n, sizeof(int));
+    data = (int*) calloc(n, sizeof(int)); */
 
-    if (data == NULL)
+    /* if (data == NULL)
     {
         printf("Memory allocation failed");
         exit(0);
@@ -294,7 +294,7 @@ void fun()
         }
     }
     
-    printf("Largest value: %d", *data);
+    printf("Largest value: %d", *data); */
 }
 /* void swap(int *a, int *b, int *c) {
     int temp;
