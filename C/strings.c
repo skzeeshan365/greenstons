@@ -107,6 +107,78 @@ void examples()
 
     /* printf("Enter a sentence: ");
     reverseSentence(); */
+
+    // Concatenate Two Strings Without Using strcat()
+
+    /* char str1[100] = "hello ", str2[] = "world";
+    int str_lens = 0, j;
+
+    while (str1[str_lens] != '\0')
+    {
+        ++str_lens;
+    }
+
+    for (j = 0; str2[j] != '\0'; ++j, ++str_lens)
+    {
+        str1[str_lens] = str2[j];
+    }
+
+    str1[str_lens] = '\0';
+    puts(str1); */
+
+    // Remove Characters in String Except Alphabets
+
+    /* char line[100];
+
+    printf("Enter a string: ");
+    fgets(line, sizeof(line), stdin);
+
+    for (int i = 0, j; line[i] != '\0'; i++)
+    {
+        while (!(line[i] >= 'a' && line[i] <= 'z') && !(line[i] >= 'A' && line[i] <= 'Z') && !(line[i] == '\0'))
+        {
+            for (j = i; line[j] != '\0'; j++)
+            {
+                line[j] = line[j + 1];
+                }
+           line[j] = '\0';
+        }
+    }
+    printf("Output String: ");
+    puts(line); */
+
+    // Sort strings in the dictionary order
+
+    char c[5][50], temp[50];
+
+    printf("Enter five words: ");
+
+    for (int i = 0; i < 5; i++)
+    {
+        fgets(c[i], sizeof(c[i]), stdin);
+    }
+
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = i + 1; j < 5; j++)
+        {
+            if (strcmp(c[i], c[j]) > 0)
+            {
+                strcpy(temp, c[i]);
+                strcpy(c[i], c[j]);
+                strcpy(c[j], temp);
+            }
+            
+        }
+        
+    }
+    
+
+    printf("\nIn the lexicographical order: \n");
+    for (int i = 0; i < 5; ++i)
+    {
+        fputs(c[i], stdout);
+    }
 }
 /* void reverseSentence() 
 {
