@@ -4,6 +4,12 @@
 void write();
 void read();
 
+struct Student
+{
+    int roll_no;
+    char name[20];
+};
+
 int main()
 {
     char mode;
@@ -37,10 +43,10 @@ void write()
         exit(1);
     }
 
-    printf("Enter a number: ");
-    scanf("%d", &n);
-
-    fprintf(ptr, "%d", n);
+    struct Student inp1 = {1, "Ram"};
+    struct Student inp2 = {2, "Shyam"};
+    fwrite(&inp1, sizeof(struct Student), 1, ptr);
+    fwrite(&inp2, sizeof(struct Student), 1, ptr);
     fclose(ptr);
 }
 
