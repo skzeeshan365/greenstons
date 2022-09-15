@@ -61,7 +61,7 @@ void main()
     c = getch();
     putch(c); */
 
-    int *addr, n;
+    /* int *addr, n;
     char c;
 
     scanf("%d", (printf("Enter number of elements: "), &n));
@@ -108,7 +108,7 @@ void main()
         printf("Error! memory not allocated.");
         exit(0);
     }
-    free(addr);
+    free(addr); */
     
 
     // struct tech tech, *tech_ptr;
@@ -116,4 +116,26 @@ void main()
     // tech_ptr = &tech;
     // tech_ptr->n = 7;
     // printf("%d", tech_ptr->n);
+
+    int x[5] = {1, 2, 4, 5, 6};
+    int n;
+    int *p, pc;
+
+    n = 1;
+    p = x;
+    pc = p + sizeof(int) * (n);
+
+    int length;
+    length = sizeof(x) / sizeof(int);
+
+    printf("Addr of elements\n");
+    for (int i = 0; i < length; i++)
+    {
+        printf("%d\n", &x[i]);
+    }
+    printf("\n");
+
+    printf("%d\n", sizeof(x[0]));
+    printf("%d\n", x);
+    printf("%d", p);
 }
