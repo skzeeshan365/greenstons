@@ -1,2 +1,0 @@
-msg = "fgfgffsdg"
-print(msg)
