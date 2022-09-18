@@ -33,7 +33,7 @@ int main () {
    fclose (inf);
 } */
 
-#include <stdio.h>
+/* #include <stdio.h>
 
 void enterData(int firstMatrix[][10], int secondMatrix[][10], int rowFirst, int columnFirst, int rowSecond, int columnSecond);
 void multiplyMatrices(int firstMatrix[][10], int secondMatrix[][10], int multResult[][10], int rowFirst, int columnFirst, int rowSecond, int columnSecond);
@@ -134,4 +134,115 @@ void display(int mult[][10], int rowFirst, int columnSecond)
             printf("\n\n");
       }
    }
+} */
+
+/* #include <stdio.h>
+
+void enterElements(int arr1[10][10], int arr2[10][10], int r1, int r2, int c1, int c2);
+void multiplyMatrix(int arr1[10][10], int arr2[10][10], int result[10][10], int r1, int r2, int c1, int c2);
+void display(int result[10][10], int r1, int c2);
+
+int main()
+{
+   int arr1[10] [10], arr2[10] [10], result[10] [10], r1, r2, c1, c2;
+
+   printf("Enter rows and columns of first matrix:\n");
+   scanf("%d %d", &r1, &c1);
+   printf("Enter rows and columns of second matrix:\n");
+   scanf("%d %d", &r2, &c2);
+
+   while (c1 != r2)
+   {
+      printf("Error! column of first matrix not equal to row of second.\n");
+      printf("Enter rows and column for first matrix: ");
+      scanf("%d%d", &r1, &c1);
+      printf("Enter rows and column for second matrix: ");
+      scanf("%d%d", &r2, &c2);
+   }
+   enterElements(arr1, arr2, r1, r2, c1, c2);
+   multiplyMatrix(arr1, arr2, result, r1, r2, c1, c2);
+   display(result, r1, c2);
+}
+
+void enterElements(int arr1[][10], int arr2[][10], int r1, int r2, int c1, int c2)
+{
+   int i, j;
+   printf("\nEnter elements of matrix 1:\n");
+   for (i = 0; i < r1; ++i)
+   {
+      for (j = 0; j < c1; ++j)
+      {
+         printf("Enter elements a%d%d: ", i + 1, j + 1);
+         scanf("%d", &arr1[i][j]);
+      }
+   }
+
+   printf("\nEnter elements of matrix 2:\n");
+   for (i = 0; i < r2; ++i)
+   {
+      for (j = 0; j < c2; ++j)
+      {
+         printf("Enter elements b%d%d: ", i + 1, j + 1);
+         scanf("%d", &arr2[i][j]);
+      }
+   }
+}
+
+void multiplyMatrix(int arr1[][10], int arr2[][10], int result[][10], int r1, int r2, int c1, int c2)
+{
+   int i, j, k;
+
+   for (i = 0; i < r1; ++i)
+   {
+      for (j = 0; j < c2; ++j)
+      {
+         result[i][j] = 0;
+      }
+   }
+
+   for (i = 0; i < r1; i++)
+   {
+      for (j = 0; j < c2; j++)
+      {
+         for (k = 0; k < c1; k++)
+         {
+            result[i][j] += arr1[i][k] * arr2[k][j];
+         }
+      }
+   }
+}
+
+void display(int result[][10], int r1, int c2)
+{
+   for (int i = 0; i < r1; i++)
+   {
+      for (int j = 0; j < c2; j++)
+      {
+         printf("%d  ", result[i][j]);
+         if (j == c2 - 1)
+         {
+            printf("\n");
+         }
+      }
+   }
+} */
+
+// Strings
+
+#include <stdio.h>
+
+int main()
+{
+   // char s[] = "123456";
+   // printf("%d", sizeof(s));
+
+   int a, b, c;
+   a = 10;
+   b = 5;
+
+   for (int i = 0; i < 2; i++)
+   {
+      c = a++;
+   }
+   printf("%d", c);
 }
