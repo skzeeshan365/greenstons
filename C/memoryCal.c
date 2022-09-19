@@ -2,7 +2,8 @@
 // elementAddr = baseAddr + (index * sizeof datatype)
 /* Point to be noted.
 It can be done using memory alloction with pointers or directly assigning a pointer to the baseAddr
-but I need to CALCULATE it from scratch, I don't just want to access it using pointers or any other builtin features I want to calculate it in my program*/
+but I need to CALCULATE it from scratch, I don't just want to access it using pointers or
+any other builtin features I want to calculate it in my program*/
 // Lets take look at an example
 
 
@@ -21,11 +22,14 @@ void forTypeChar()
     printf("Address: %d\n", ptr);
     printf("Value: %d", *ptr);
 
-    /* As you can see we calculated the memory address and assigned a pointer ptr to it so we can access it, So my main problem is to calculate the memory address not to access it,
+    /* As you can see we calculated the memory address and assigned a pointer ptr to it so we can access it,
+    So my main problem is to calculate the memory address not to access it,
     Below we wil see where Im getting the problem */
 }
 
-/* As we saw in program 1 how can we calculate memory address of an array element of type char and its working perfectly, but the problem arises when the data type of our array is int, float, double, etc; here we will talk about char and int only
+/* As we saw in program 1 how can we calculate memory address of an array element of type char and its working perfectly,
+but the problem arises when the data type of our array is int, float, double, etc; here we will talk about char and int only
+
 As we know 
 char takes 1 byte
 int takes 4 btyes
@@ -45,8 +49,10 @@ void forTypeInt()
     printf("Address: %d\n", ptr);
     printf("Value: %d", *ptr);
 
-    /* Here we used int and according to the formula it should calculate the address of index 1 element that's value is 2 but its calculating the address of last element,
-    its happening because int is of 4 bytes and according to our formula (1 * sizeof(int)) should return 4 bytes and add it to baseAddr but instead its returning 24 bytes 
+    /* Here we used int and according to the formula it should calculate the address of index 1 element that's value is 2
+    but its calculating the address of last element,
+    its happening because int is of 4 bytes and according to our formula (1 * sizeof(int)) should return 4 bytes and add it to baseAddr
+    but instead its returning 24 bytes 
     And thats the problem I'm facing with my program */
 
     /* It can also be done with changing datatype in formula, see Example 3*/
@@ -66,7 +72,8 @@ void Example3()
     printf("Address: %d\n", ptr);
     printf("Value: %d", *ptr);
 
-    /* As you can see its working properly by changing datatype in ptr = Arr2 + (index * sizeof(char)) from int to char, but that doesn't make sense as our Array is of int and we cannot and should not use char in the formula;*/
+    /* As you can see its working properly by changing datatype in ptr = Arr2 + (index * sizeof(char)) from int to char,
+    but that doesn't make sense as our Array is of int and we cannot and should not use char in the formula;*/
 }
 
 
