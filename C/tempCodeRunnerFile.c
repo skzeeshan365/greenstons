@@ -232,7 +232,7 @@ void display(int result[][10], int r1, int c2)
 #include <stdio.h>
 #include <string.h>
 
-enum boolean {true, false};
+// enum boolean {true, false};
 
 int main()
 {
@@ -319,7 +319,7 @@ int main()
 
    printf("Diff addr: %d", ptr-qPtr); */
 
-   int a[] = {10, 11, -1, 56, 67, 5, 4};
+   /* int a[] = {10, 11, -1, 56, 67, 5, 4};
    int *p, *q;
 
    p = a;
@@ -332,6 +332,14 @@ int main()
    q--;
    printf("%d\n", (*(q+2))--);
    printf("%d\n", *(p+2)-2);
-   printf("%d", *(p++ -2)-1);
-   
+   printf("%d", *(p++ -2)-1); */
+
+   /* int a = 9;
+   void *p;
+
+   p = &a;
+   *(int *)p = 5; */
+  
+  /* int *p;
+  printf("%d", *p); */
 }
