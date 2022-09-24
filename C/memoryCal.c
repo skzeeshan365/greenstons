@@ -88,6 +88,9 @@ void test()
     printf("BaseAddr: %d\n", Arr2);
     printf("Address: %d\n", ptr);
     printf("Value: %d", *ptr);
+
+    /* Dont't compare it with Memory allocation in which we use this same concept
+    here it is based on Pointer Arithmetic */
 }
 
 int main()

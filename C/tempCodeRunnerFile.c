@@ -299,9 +299,39 @@ int main()
    
    // printf("Reversed string: %s", string);
 
-   int a = 5, *p, **q;
+   /* int a = 5, *p, **q;
    p = &a;
    q = &p;
    printf("%d\n", &p);
-   printf("%d", *q);
+   printf("%d", *q); */
+
+   /* int x[5] = {1, 2, 4, 5, 6};
+   int *ptr, *qPtr, index;
+
+   ptr = x;
+   qPtr = &x[3];
+
+   printf("BaseAddr: %d\n", x);
+   printf("Address of ptr: %d\n", ptr);
+   printf("Value of ptr: %d\n", *ptr);
+   printf("Address of qPtr: %d\n", qPtr);
+   printf("Value of qPtr: %d\n", *qPtr);
+
+   printf("Diff addr: %d", ptr-qPtr); */
+
+   int a[] = {10, 11, -1, 56, 67, 5, 4};
+   int *p, *q;
+
+   p = a;
+   q = &a[0] + 3;
+
+   printf("%d %d %d\n", (*p)++, (*p)++, *(++p));
+   printf("%d\n", *p);
+   printf("%d\n", (*p)++);
+   printf("%d\n\n", (*p)++);
+   q--;
+   printf("%d\n", (*(q+2))--);
+   printf("%d\n", *(p+2)-2);
+   printf("%d", *(p++ -2)-1);
+   
 }
