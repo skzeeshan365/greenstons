@@ -230,13 +230,16 @@ void display(int result[][10], int r1, int c2)
 // Strings
 
 #include <stdio.h>
+#include <string.h>
+
+enum boolean {true, false};
 
 int main()
 {
    // char s[] = "123456";
    // printf("%d", sizeof(s));
 
-   int a, b, c;
+   /* int a, b, c;
    a = 10;
    b = 5;
 
@@ -244,5 +247,61 @@ int main()
    {
       c = a++;
    }
-   printf("%d", c);
+   printf("%d", c); */
+
+   /* char x[10], y[10];
+   enum boolean isSame;
+   printf("Enter string 1:\n");
+   gets(x);
+   printf("Enter string 2:\n");
+   gets(y);
+
+   for (int i = 0; x[i] != '\0' || y[i] != '\0'; i++)
+   {
+      if (x[i] != y[i])
+      {
+         isSame = false;
+         break;
+      }
+      
+   }
+   if (isSame)
+   {
+      printf("False %d\n", isSame);
+   } else {
+      printf("True %d\n", isSame);
+   }
+
+   printf(isSame ? "Not same\n": "same\n");
+
+   printf("%d", strcmp(x, y)); */
+
+   // char string[10] = {"zeeshan"};
+   // char ch;
+   // int len = strlen(string);
+
+   /* for (int i = 0; i < len/2; i++)
+   {
+      ch = string[i];
+      string[i] = string[len-1-i];
+      string[len-1-i] = ch;
+   } */
+
+   // for (int i = 0; i < len; i++)
+   // {
+   //    if (string[i] >= 65 && string[i] <= 90)
+   //    {
+   //       string[i] = string[i]+32;
+   //    }
+      
+   // }
+   
+   
+   // printf("Reversed string: %s", string);
+
+   int a = 5, *p, **q;
+   p = &a;
+   q = &p;
+   printf("%d\n", &p);
+   printf("%d", *q);
 }

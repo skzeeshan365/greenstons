@@ -1,3 +1,5 @@
+/*** PROBLEM IS SOLVED ***/
+
 // Need to apply a formula for calculating memory address of array elements 
 // elementAddr = baseAddr + (index * sizeof datatype)
 /* Point to be noted.
@@ -5,7 +7,6 @@ It can be done using memory alloction with pointers or directly assigning a poin
 but I need to CALCULATE it from scratch, I don't just want to access it using pointers or
 any other builtin features I want to calculate it in my program*/
 // Lets take look at an example
-
 
 #include <stdio.h>
 
@@ -76,10 +77,23 @@ void Example3()
     but that doesn't make sense as our Array is of int and we cannot and should not use char in the formula;*/
 }
 
+void test()
+{
+    int Arr2[5] = {1, 2, 4, 5, 6};
+    int *ptr, index;
+
+    index = 2;
+    ptr = Arr2 + index;
+
+    printf("BaseAddr: %d\n", Arr2);
+    printf("Address: %d\n", ptr);
+    printf("Value: %d", *ptr);
+}
 
 int main()
 {
     // Use forTypeChar and forTypeInt functions here
+    test();
     return 0;
 }
 
