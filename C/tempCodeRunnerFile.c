@@ -231,11 +231,19 @@ void display(int result[][10], int r1, int c2)
 
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 // enum boolean {true, false};
 
-int main()
-{
+// int add(int, int);
+// int sub(int, int);
+// void display(int (*ptr)(int, int))
+// {
+//    printf("%d\n", ptr(5, 1));
+// }
+
+// int main()
+// {
    // char s[] = "123456";
    // printf("%d", sizeof(s));
 
@@ -342,4 +350,204 @@ int main()
   
   /* int *p;
   printf("%d", *p); */
+
+  /* display(add);
+  display(sub); */
+// }
+
+/* int add(int a, int b)
+{
+   return a+b;
+}
+int sub(int a, int b)
+{
+   return a-b;
+} */
+
+/* typedef int (*fptr)(int, int);
+
+struct test
+{
+   int a, b;
+   fptr fPtr;
+};
+
+int add(int a, int b)
+{
+   return a+b;
+} */
+
+// void fact(int);
+
+// int test(int);
+
+// int fun1(int);
+// int fun2(int);
+
+// void count(int);
+
+/* typedef struct test
+{
+   char c;
+   int n;
+   double b;
+} test;
+
+
+int main()
+{ */
+   /* int a, b, ch;
+   int (*fptr[4])(int, int) = {add, sub};
+
+   printf("Request codes\n");
+   printf("Addition = 0\n");
+   printf("Subtraction = 1\n");
+   printf("Multiplycation = 2\n");
+   printf("Division = 3\n");
+
+   printf("Enter Request code: ");
+   scanf("%d", &ch);
+   printf("Enter 2 Nos: ");
+   scanf("%d %d", &a, &b);
+
+   printf("Result: %d", fptr[ch](a, b)); */
+
+   /* struct test test;
+   test.a = 2;
+   test.b = 3;
+   test.fPtr = add;
+   printf("%d", test.fPtr(test.a, test.b)); */
+
+   // fact(5);
+
+   // printf("%d", fun1(5));
+   // count(3);
+
+   /* printf("%d\n", sizeof(char));
+   printf("%d\n", sizeof(short int));
+   printf("%d\n", sizeof(int));
+   printf("%d\n", sizeof(long int));
+   printf("%d\n", sizeof(long long int));
+   printf("%d\n", sizeof(float));
+   printf("%d\n", sizeof(double));
+   printf("%d\n", sizeof(long double)); */
+/* } */
+
+/* void fact(int n)
+{
+   if (n<1)
+   {
+      return;
+   } else {
+      printf("%d\n", n-1);
+      fact(n-1);
+      printf("\n%d\n", n);
+   }
+} */
+
+/* int test(int n)
+{
+   int s = 0;
+   if (n == 1)
+   {
+      return n;
+   }
+   return n + test(n - 1);
+} */
+
+/* int fun1(int n)
+{
+   if (n <= 1)
+   {
+      return 1;
+   } else {
+      return n * fun2(n-1);
+   }
+   
+}
+
+int fun2(int n)
+{
+   if (n <= 1)
+   {
+      return 1;
+   }
+   else
+   {
+      return n * fun1(n - 1);
+   }
+} */
+
+/* void count(int n)
+{
+   static int d = 1;
+   printf("%d\n", n);
+   printf("%d\n", d);
+   d++;
+   if (n > 1)
+   {
+      count(n-1);
+   } else {
+
+   printf("%d\n", d);
+   }
+   
+} */
+
+/* char location[50] = {"C:/Users/zeeshan/OneDrive/VSCode/Data/"};
+char *filename;
+
+int main()
+{
+   FILE *fptr;
+   
+   filename = "testing.txt";
+   fptr = fopen(strcat(location, filename), "w+");
+
+   if (fptr == NULL)
+   {
+      printf("File not opened");
+      exit(1);
+   }
+
+   fprintf(fptr, "%s", "sdfdafasf");
+   rewind(fptr);
+   do
+   {
+      char c = fgetc(fptr);
+      putchar(c);
+   } while (!feof(fptr));
+   
+} */
+
+/* typedef enum {
+   false,
+   true
+} bool;
+
+void main()
+{
+   bool isChecked;
+
+   isChecked = false;
+
+   if (isChecked)
+   printf("Checked");
+   else
+   printf("not checked");
+   
+} */
+
+int fun()
+{
+   static int a = 16;
+   return a--;
+}
+int main()
+{
+   for (fun(); fun(); fun())
+   {
+      printf("a = %d\n", fun());
+   }
+   
 }
