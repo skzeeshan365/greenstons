@@ -43,7 +43,12 @@ int main()
         break;
     case '2':
         printf("Enter name of the student: ");
-        scanf("%s", name);
+        int c;
+        do
+        {
+            c = getchar();
+        } while (c != EOF && c != '\n');
+        gets(name);
         read(name);
         break;
     case '3':
@@ -62,8 +67,14 @@ void write()
 {
     struct students student;
 
+    int c;
+    do
+    {
+        c = getchar();
+    } while (c != EOF && c != '\n');
+
     printf("Enter student name: ");
-    scanf("%s", student.student_name);
+    fgets(student.student_name, sizeof(student.student_name), stdin);
 
     printf("        Enter Roll no: ");
     scanf("%d", &student.emp.roll_no);
@@ -112,11 +123,13 @@ void read(char keyword[20])
     }
 
     struct students student;
-
+    
+    int n = 1;
     while (fread(&student, sizeof(struct students), 1, fptr))
     {
         if (!strcmp(keyword, student.student_name))
         {
+            printf("%d record", n++);
             printf("\nStudent name: %s\n", student.student_name);
             printf("Student roll no: %d\n", student.emp.roll_no);
             printf("Student marks: %d\n\n", student.emp.marks);
