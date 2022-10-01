@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <time.h>
 
-void read(char keyword[20]);
+void read(char keyword[]);
 void write();
 void viewAll();
 void redirect();
@@ -19,6 +20,7 @@ struct students
 
     struct student_data
     {
+        int student_ID;
         int roll_no;
         int marks;
     } emp;
@@ -43,12 +45,7 @@ int main()
         break;
     case '2':
         printf("Enter name of the student: ");
-        int c;
-        do
-        {
-            c = getchar();
-        } while (c != EOF && c != '\n');
-        gets(name);
+        scanf("%s", name);
         read(name);
         break;
     case '3':
@@ -66,15 +63,12 @@ int main()
 void write()
 {
     struct students student;
+    srand(time(0));
 
-    int c;
-    do
-    {
-        c = getchar();
-    } while (c != EOF && c != '\n');
+    student.emp.student_ID = rand();
 
     printf("Enter student name: ");
-    fgets(student.student_name, sizeof(student.student_name), stdin);
+    scanf("%s", student.student_name);
 
     printf("        Enter Roll no: ");
     scanf("%d", &student.emp.roll_no);
@@ -108,7 +102,7 @@ void write()
         redirect();
     }
 }
-void read(char keyword[20])
+void read(char keyword[])
 {
     int studentExist = 0;
 
@@ -127,10 +121,11 @@ void read(char keyword[20])
     int n = 1;
     while (fread(&student, sizeof(struct students), 1, fptr))
     {
-        if (!strcmp(keyword, student.student_name))
+        if (strcmp(keyword, student.student_name)==0)
         {
-            printf("%d record", n++);
+            printf("\n%d record\n", n++);
             printf("\nStudent name: %s\n", student.student_name);
+            printf("Student ID: %d\n", student.emp.student_ID);
             printf("Student roll no: %d\n", student.emp.roll_no);
             printf("Student marks: %d\n\n", student.emp.marks);
             studentExist++;
@@ -160,7 +155,7 @@ void viewAll()
     int i = 1;
     while (fread(&student, sizeof(struct students), 1, fptr))
     {
-        printf("%d: Student name: %s\n", i, student.student_name);
+        printf("%d: %s\n", i, student.student_name);
         i++;
     }
     fclose(fptr);

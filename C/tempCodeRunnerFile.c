@@ -538,7 +538,7 @@ void main()
    
 } */
 
-int fun()
+/* int fun()
 {
    static int a = 16;
    return a--;
@@ -550,5 +550,50 @@ int main()
       printf("a = %d\n", fun());
    }
    
-}
+} */
 
+/* int main()
+{
+   char c1[20];
+   char c2[20];
+
+   printf("Enter string 1: ");
+   gets(c1);
+   printf("Enter string 2: ");
+   gets(c2);
+
+   printf("Output: %d", strcmp(c1, c2));
+} */
+
+#include <time.h>
+
+typedef enum {
+   false,
+   true
+} bool;
+
+int main()
+{
+   char x[10], y[10];
+   bool isSame;
+   printf("Enter string 1:\n");
+   gets(x);
+   printf("Enter string 2:\n");
+   gets(y);
+
+   for (int i = 0; x[i] != '\0' || y[i] != '\0'; i++)
+   {
+      if (x[i] != y[i])
+      {
+         isSame = false;
+         break;
+      }
+      
+   }
+   if (isSame)
+   {
+      printf("False %d\n", isSame);
+   } else {
+      printf("True %d\n", isSame);
+   }
+}
