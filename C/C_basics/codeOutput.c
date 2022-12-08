@@ -7,6 +7,10 @@ int main()
 
     fptr = fopen(__FILE__, "r");
 
+    //Using NULL statement ";"
+    for (; (c = getc(fptr)) != EOF; putchar(c));
+    
+    //Using normal loop
     do
     {
         c = getc(fptr);
