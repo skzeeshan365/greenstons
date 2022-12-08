@@ -565,7 +565,7 @@ int main()
    printf("Output: %d", strcmp(c1, c2));
 } */
 
-#include <time.h>
+/* #include <time.h>
 
 typedef enum {
    false,
@@ -596,4 +596,179 @@ int main()
    } else {
       printf("True %d\n", isSame);
    }
+} */
+
+/* void update(int *a, int *b)
+{
+   *a = *a + *b;
+   *b = -(b - a);
+}
+
+int main()
+{
+   int a, b;
+   int *pa = &a, *pb = &b;
+
+   scanf("%d %d", &a, &b);
+   update(pa, pb);
+   printf("%d\n%d", a, b);
+
+   return 0;
+} */
+
+#include <stdio.h>
+// int main()
+// {
+//    /* static int i = 5;
+//    if (--i)
+//    {
+//       main();
+//       printf("%d ", i);
+//    } */
+
+//    int x = 10;
+//    static int y = x;
+//    return 0;
+// }
+
+void display(char name[], int age)
+{
+   printf("Hello %s your age is %d", name, age);
+}
+int main()
+{
+   // int a, b;
+
+   // printf("Enter values a & b: ");
+   // scanf("%d %d", &a, &b);
+
+   // printf("Values before swapping: %d, %d", a, b);
+
+   // a = a - b;
+   // b = a + b;
+   // a = b - a;
+
+   // printf("\nValues after swapping: %d, %d", a, b);
+
+   /* int lowercase_vowel, uppercase_vowel;
+   char c;
+
+   printf("Enter an alphabet: ");
+   scanf("%c", &c);
+
+   lowercase_vowel = (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
+   uppercase_vowel = (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U');
+
+   if (lowercase_vowel || uppercase_vowel)
+   printf("Alphabet");
+   else
+   printf("consonant"); */
+
+   /* int year = 2016;
+
+   if ((year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0)))
+   {
+      printf("leap year");
+   } else
+   {
+      printf("not a leap year");
+   } */
+
+   /* int n;
+   printf("Enter an integer: ");
+   scanf("%d", &n);
+
+   while (n > 2)
+   {
+     n = n - 2;
+   }
+
+   if (n == 2)
+   {
+      printf("even");
+   } else {
+      printf("odd");
+   } */
+
+   /* int num, sum = 0;
+
+   do
+   {
+      printf("Enter the no: ");
+      scanf("%d", &num);
+      sum += num;
+   } while (num != 0);
+   
+   printf("sum = %d", sum); */
+
+   /* int i = 1, n;
+
+   printf("Enter: ");
+   scanf("%d", &n);
+
+   do
+   {
+      printf("n = %d\n", i);
+      i++;
+   } while (i <= n); */
+   
+   
+   /* int ID, pwd;
+   ID = 100;
+   pwd = 200;
+
+   scanf("%d", (printf("Enter ID: "), &ID));
+
+   switch (ID)
+   {
+   case 100:
+      scanf("%d", (printf("Enter password: "), &pwd));
+      switch (pwd)
+      {
+      case 200:
+         printf("Welcome");
+         break;
+
+      default:
+         printf("Please enter valid password");
+         break;
+      }
+      break;
+   
+   default:
+   printf("Please enter valid ID");
+      break;
+   } */
+
+   /* int i, num[5];
+
+   printf("Enter any 5 no.s\n");
+
+   for (i = 0; i < 5; i++)
+   {
+      scanf("%d", &num[i]);
+   }
+
+   printf("OUTPUT:\n");
+   for (i = 0; i < 5; i++)
+   {
+      printf("%d\n", num[i]);
+   } */
+
+   /* char name[20];
+   int age;
+
+   printf("Enter your name: ");
+   scanf("%s", name);
+
+   printf("Enter your age: ");
+   scanf("%d", &age);
+
+   display(name, age); */
+
+   for (int i = 1; i <= 10; i++)
+   {
+      printf("%d\t", i);
+   }
+   
 }

@@ -1,0 +1,28 @@
+//Representation of negative 11 in binary
+Number: -11
+Add 1: -10
+convert to binary: 00001010
+complement bits: 11110101
+
+
+Number: 11110101
+complement bits: 00001010
+convert to decimal: 10
+change the sign: -10
+subtract 1: -10-1 = -11
+
+
+00000100
+11111011
+
+-5
+-4
+00000100
+11111011
+
+00001010
+11110101
+00001010
+10
+-10-1
+-111
