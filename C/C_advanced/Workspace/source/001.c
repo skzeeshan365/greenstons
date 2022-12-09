@@ -5,7 +5,5 @@
 int main()
 {
     printf("result: %.2lf\n", addNumbers(3, 2.5, 4.0, 4.0));
-    
     warning("h %d", 5);
-    return 0;
 }
