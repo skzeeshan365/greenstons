@@ -2,10 +2,10 @@
 #include <stdarg.h>
 #include "h_01.h"
 
-double addNumbers(int, ...);
-
 int main()
 {
-    int a = 10;
-    printf("result: %.2lf", addNumbers(3, 2.5, 4.0, 4.0));
+    printf("result: %.2lf\n", addNumbers(3, 2.5, 4.0, 4.0));
+    
+    warning("h %d", 5);
+    return 0;
 }
