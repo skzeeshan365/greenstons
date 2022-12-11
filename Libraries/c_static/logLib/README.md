@@ -6,5 +6,7 @@ You can use the library by
 then in function "main"
 
 > initialize the library by invoking initializeDebug(DEBON)
+
 > DEBON 1: DEBUG = true
+
 > DEBON 0: DEBUG = false
