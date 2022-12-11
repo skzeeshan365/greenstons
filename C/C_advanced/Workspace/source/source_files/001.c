@@ -5,7 +5,7 @@
 
 int main()
 {
-    initializeDebug(0);
+    initializeDebug(1);
     logs(1, "%dhdahd isdhishd", 3);
 }
 
