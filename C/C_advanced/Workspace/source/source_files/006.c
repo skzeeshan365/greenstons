@@ -1,12 +1,34 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+
+typedef int (* func) (int, int);
+
+int sub(int a, int b)
+{
+    return a - b;
+}
+
+int add(int a, int b)
+{
+    return a + b;
+}
+
+typedef struct check
+{
+    int a, b;
+    func fuck;
+} check;
 
 int main()
 {
-    int i;
-    char x[] = "20005040 this is test 4544", *ptr;
+    check test;
+    test.a = 5;
+    test.b = 10;
 
-    printf("%ld\n", strtol(x, &ptr, 10));
-    printf("%s", ptr);
+    test.fuck = add;
+    test.fuck(test.a, test.b);
+
+    printf("%d", test.fuck(test.a, test.b));
+
+        return 0;
 }

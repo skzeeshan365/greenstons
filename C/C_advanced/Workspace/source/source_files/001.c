@@ -1,11 +1,15 @@
 #include <stdio.h>
-#include "debugops.h"
-#include <stdlib.h>
-#include <string.h>
+#include "h_07.h"
 
 int main()
 {
-    initializeDebug(1);
-    logs(1, "%dhdahd isdhishd", 3);
+    listNode *check = NULL;
+    /* insertAtBeginning(&check, 6);
+    for (size_t i = 0; i < 10; i++)
+    {
+        insertAtEnd(&check, i);
+    } */
+    display(&check, "%d\t");
+    freeList(&check);
 }
 

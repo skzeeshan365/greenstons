@@ -1,2 +1,1 @@
-int a = 5;
-    ptr = &a;
+print("%d\n", getLenth());
