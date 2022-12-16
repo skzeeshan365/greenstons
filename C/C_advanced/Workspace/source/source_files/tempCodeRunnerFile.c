@@ -1,2 +1,1 @@
-int a = 5;
-    ptr = &a;
+    // memset(&act, '\0', sizeof(act));
