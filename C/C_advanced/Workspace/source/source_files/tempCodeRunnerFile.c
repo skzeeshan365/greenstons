@@ -1,1 +1,1 @@
-print("%d\n", getLenth());
+    // memset(&act, '\0', sizeof(act));

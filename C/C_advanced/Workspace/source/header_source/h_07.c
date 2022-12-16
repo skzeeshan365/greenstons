@@ -258,22 +258,24 @@ void display(listNode **linkedList, const char *format)
     if (*linkedList == NULL)
     {
         emptyList_error("display");
-
+    } else
+    {
         listNode *temp = *linkedList;
         while (temp != NULL)
         {
             printf(format, temp->data);
             temp = temp->nextPtr;
+        }
     }
-    }
+    
 }
 
 void displayInRange(listNode **linkedList, const char *format, int lower, int upper)
 {
     if (*linkedList == NULL)
     {
-    emptyList_error("displayInRange");
-
+        emptyList_error("displayInRange");
+    } else {
     listNode *lowerNode = *linkedList, *upperNode = *linkedList;
     int i = 0, j = lower;
     while (i < lower)
@@ -300,7 +302,7 @@ void freeList(listNode **linkedList)
     if (*linkedList == NULL)
     {
     emptyList_error("freeList");
-
+    } else {
     while (*linkedList != NULL)
     {
         listNode *temp = *linkedList;

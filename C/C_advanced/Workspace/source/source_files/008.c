@@ -75,4 +75,5 @@ int main()
     pop(st);
     printf("After pop:\n");
     display(st);
+    free(st);
 }
