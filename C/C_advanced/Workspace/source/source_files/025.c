@@ -1,3 +1,4 @@
+//Linear search
 #include <stdio.h>
 
 #define SIZE 10
