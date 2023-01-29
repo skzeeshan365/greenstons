@@ -1,4 +1,4 @@
-//Program
+//Program fibonacci series
 #include <stdio.h>
 
 //Method 1
