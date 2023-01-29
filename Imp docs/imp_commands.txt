@@ -1,1 +1,5 @@
 enable_core_file_generation: export CYGWIN="CYGWIN error_start=dumper -d %1 %2"
+
+sudo systemctl daemon-reload
+sudo systemctl restart gunicorn
+sudo systemctl restart nginx
